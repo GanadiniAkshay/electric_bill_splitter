@@ -1,45 +1,169 @@
 <!DOCTYPE html>
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Electricity Bill</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div>
-        <h3>Bill Details</h3>
-        <label>Total Bill</label>
-        <input type="text" id="total_bill">
-        <br/>
-        <label>Total Days</label>
-        <input type="text" id="total_days">
-
-        <h3>Number of Days Absent</h3>
-        <label>Aman Aggrawal</label>
-        <input type="text" id="aman">
-        <br/>
-        <label>Manas Gaur</label>
-        <input type="text" id="manas">
-        <br/>
-        <label>Kalp Sampat</label>
-        <input type="text" id="kalp">
-        <br/>
-        <label>Akshay Kulkarni</label>
-        <input type="text" id="akshay">
-
-        <br/>
-        <button onclick="submit()">Submit</button>
-
-        <br/><h3>Bill to be Paid</h3>
-        <label>Aman Aggrawal</label>
-        <input type="text" id="aman_final" disabled>
-        <br/>
-        <label>Manas Gaur</label>
-        <input type="text" id="manas_final" disabled>
-        <br/>
-        <label>Kalp Sampat</label>
-        <input type="text" id="kalp_final" disabled>
-        <br/>
-        <label>Akshay Kulkarni</label>
-        <input type="text" id="akshay_final" disabled>
-
+    <div class="container">
+        <div class="col align-self-center">
+            <br/>
+                <h3>Bill Details</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                                <label>Total Bill</label>
+                        </div>
+                        <div class="col">
+                                <input type="text" id="total_bill">
+                        </div>  
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+                                <label>Total Days</label>
+                            </div>
+                            <div class="col">
+                                <input type="text" id="total_days">
+                            </div>  
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                </div>
+                <br/>
+                <h3>Number of Days Absent</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                                <label>Aman</label>
+                        </div>
+                        <div class="col">
+                                <input type="text" id="aman">
+                        </div>  
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+                                <label>Manas</label>
+                            </div>
+                            <div class="col">
+                                <input type="text" id="manas">
+                            </div>  
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+                                    <label>Kalp</label>
+                            </div>
+                            <div class="col">
+                                        <input type="text" id="kalp">
+                            </div>  
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Akshay</label>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="akshay">
+                        </div>  
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <br/>
+                <button onclick="submit()" type="button" class="btn btn-primary">Submit</button>
+                <br/>
+                <br/><h3>Bill to be Paid</h3>
+                <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                    <label>Aman</label>
+                            </div>
+                            <div class="col">
+                                    <input type="text" id="aman_final">
+                            </div>  
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                    <label>Manas</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="manas_final">
+                                </div>  
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                        <label>Kalp</label>
+                                </div>
+                                <div class="col">
+                                            <input type="text" id="kalp_final">
+                                </div>  
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label>Akshay</label>
+                            </div>
+                            <div class="col">
+                                <input type="text" id="akshay_final">
+                            </div>  
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                </div>
+        </div>
     </div>
     <script>
         var submit = function(){
@@ -87,4 +211,7 @@
             console.log(akshay_final);
         } 
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
