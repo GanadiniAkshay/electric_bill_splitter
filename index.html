@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <title>Electricity Bill</title>
+</head>
+<body>
+    <div>
+        <h3>Bill Details</h3>
+        <label>Total Bill</label>
+        <input type="text" id="total_bill">
+        <br/>
+        <label>Total Days</label>
+        <input type="text" id="total_days">
+
+        <h3>Number of Days Absent</h3>
+        <label>Aman Aggrawal</label>
+        <input type="text" id="aman">
+        <br/>
+        <label>Manas Gaur</label>
+        <input type="text" id="manas">
+        <br/>
+        <label>Kalp Sampat</label>
+        <input type="text" id="kalp">
+        <br/>
+        <label>Akshay Kulkarni</label>
+        <input type="text" id="akshay">
+
+        <br/>
+        <button onclick="submit()">Submit</button>
+
+        <br/><h3>Bill to be Paid</h3>
+        <label>Aman Aggrawal</label>
+        <input type="text" id="aman_final" disabled>
+        <br/>
+        <label>Manas Gaur</label>
+        <input type="text" id="manas_final" disabled>
+        <br/>
+        <label>Kalp Sampat</label>
+        <input type="text" id="kalp_final" disabled>
+        <br/>
+        <label>Akshay Kulkarni</label>
+        <input type="text" id="akshay_final" disabled>
+
+    </div>
+    <script>
+        var submit = function(){
+            var aman = parseInt(document.getElementById("aman").value);
+            var manas = parseInt(document.getElementById("manas").value);
+            var kalp = parseInt(document.getElementById("kalp").value);
+            var akshay= parseInt(document.getElementById("akshay").value);
+            var absent_days = [aman,manas,kalp,akshay];
+            var total_days = parseInt(document.getElementById("total_days").value);
+            var total_bill = parseFloat(document.getElementById("total_bill").value);
+
+            var bill_per_day = total_bill/(total_days * 4);
+
+            var days_to_pay = [total_days,total_days,total_days,total_days];
+
+            absent_days.forEach(function(value,index){
+                if (value > 0){
+                    days_to_pay[index] = days_to_pay[index] - value;
+                    additional_days = value/3;
+
+                    days_to_pay.forEach(function(pay_value,pay_index){
+                        if (pay_index != index){
+                            days_to_pay[pay_index] = days_to_pay[pay_index] + additional_days;
+                        }
+                    });
+                }
+            });
+
+            var final_bill = [];
+
+            days_to_pay.forEach(function(value,index){
+                final_bill.push(Math.ceil(value*bill_per_day));
+            });
+
+            console.log(final_bill);
+
+            var aman_final = document.getElementById('aman_final');
+            aman_final.value = final_bill[0];
+            var manas_final = document.getElementById('manas_final');
+            manas_final.value = final_bill[1];
+            var kalp_final = document.getElementById('kalp_final');
+            kalp_final.value = final_bill[2];
+            var akshay_final = document.getElementById('akshay_final');
+            akshay_final.value = final_bill[3];
+            console.log(akshay_final);
+        } 
+    </script>
+</body>
